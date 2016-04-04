@@ -3,14 +3,10 @@ package com.chakannom.chakanmodule.multipledatasource.config;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.chakannom.chakanmodule.multipledatasource.properties.DataSource0DatabaseProperties;
 import com.chakannom.chakanmodule.multipledatasource.properties.DataSource1DatabaseProperties;
@@ -37,7 +33,6 @@ public abstract class DatabaseConfig {
 }
 
 @Configuration
-@EnableTransactionManagement
 @EnableConfigurationProperties(DataSource0DatabaseProperties.class)
 class DataSource0DatabaseConfig extends DatabaseConfig {
 
@@ -51,17 +46,9 @@ class DataSource0DatabaseConfig extends DatabaseConfig {
 		configureDataSource(dataSource0, dataSource0DatabaseProperties);
 		return dataSource0;
 	}
-
-	@Bean
-	public PlatformTransactionManager transactionManager(@Qualifier("dataSource0") DataSource dataSource0) {
-		DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(dataSource0);
-		transactionManager.setGlobalRollbackOnParticipationFailure(false);
-		return transactionManager;
-	}
 }
 
 @Configuration
-@EnableTransactionManagement
 @EnableConfigurationProperties(DataSource1DatabaseProperties.class)
 class DataSource1DatabaseConfig extends DatabaseConfig {
 
@@ -73,12 +60,5 @@ class DataSource1DatabaseConfig extends DatabaseConfig {
 		org.apache.tomcat.jdbc.pool.DataSource dataSource1 = new org.apache.tomcat.jdbc.pool.DataSource();
 		configureDataSource(dataSource1, dataSource1DatabaseProperties);
 		return dataSource1;
-	}
-	
-	@Bean
-	public PlatformTransactionManager transactionManager(@Qualifier("dataSource1") DataSource dataSource1) {
-		DataSourceTransactionManager transactionManager = new DataSourceTransactionManager(dataSource1);
-		transactionManager.setGlobalRollbackOnParticipationFailure(false);
-		return transactionManager;
 	}
 }
