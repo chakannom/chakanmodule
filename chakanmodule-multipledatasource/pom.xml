@@ -12,7 +12,7 @@
 	<artifactId>chakanmodule-multipledatasource</artifactId>
 	<name>ChaKanModule-MultipleDataSource</name>
 	<description>ChaKanModule Multiple DataSource</description>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0.RELEASE</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
