@@ -11,7 +11,8 @@
 	<groupId>com.chakannom.chakanmodule</groupId>
 	<artifactId>chakanmodule-multipledatasource</artifactId>
 	<name>ChaKanModule-MultipleDataSource</name>
-	<description>ChaKanModule Multiple DataSource</description>
+	<description>ChaKanModule Multiple DataSource
+- It can to take four datasources.</description>
 	<version>1.0.0.RELEASE</version>
 
 	<properties>
