@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = DataSource1DatabaseProperties.PREFIX)
 public class DataSource1DatabaseProperties implements DatabaseProperties {
 
-	public static final String PREFIX = "datasource[1]"; 
+	public static final String PREFIX = "chakan.module.datasource[1]"; 
 
 	private String driverClassName;
 	

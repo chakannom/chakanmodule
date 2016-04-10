@@ -2,10 +2,10 @@ package com.chakannom.chakanmodule.multipledatasource.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties(prefix = DataSource0DatabaseProperties.PREFIX)
-public class DataSource0DatabaseProperties implements DatabaseProperties {
-	
-	public static final String PREFIX = "chakan.module.datasource[0]"; 
+@ConfigurationProperties(prefix = DataSource3DatabaseProperties.PREFIX)
+public class DataSource3DatabaseProperties implements DatabaseProperties {
+
+	public static final String PREFIX = "chakan.module.datasource[3]"; 
 
 	private String driverClassName;
 	
@@ -71,7 +71,7 @@ public class DataSource0DatabaseProperties implements DatabaseProperties {
 		return maxActive;
 	}
 
-	public void setMaxActivel(int maxActive) {
+	public void setMaxActive(int maxActive) {
 		this.maxActive = maxActive;
 	}
 
@@ -109,6 +109,6 @@ public class DataSource0DatabaseProperties implements DatabaseProperties {
 	
 	@Override
 	public String toString() {
-		return "DataSource0DatabaseProperties[" + this.driverClassName + "]";
+		return "DataSource3DatabaseProperties[" + this.driverClassName + "]";
 	}
 }
