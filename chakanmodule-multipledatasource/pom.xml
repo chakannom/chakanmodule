@@ -11,9 +11,21 @@
 	<groupId>com.chakannom.chakanmodule</groupId>
 	<artifactId>chakanmodule-multipledatasource</artifactId>
 	<name>ChaKanModule-MultipleDataSource</name>
-	<description>ChaKanModule Multiple DataSource
-- It can to take four datasources.</description>
+	<description>ChaKanModule Multiple DataSource</description>
 	<version>1.0.0.RELEASE</version>
+
+	<organization>
+		<name>Seon Yu</name>
+		<url>http://blog.chakannom.com</url>
+	</organization>
+
+	<developers>
+		<developer>
+			<id>chakannom</id>
+			<name>Seon Yu</name>
+			<email>genteelson at gmail.com</email>
+		</developer>
+	</developers>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
