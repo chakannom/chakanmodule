@@ -47,5 +47,6 @@
 
 	<modules>
 		<module>chakanmodule-multipledatasource</module>
+		<module>chakanmodule-multiplemybatis</module>
 	</modules>
 </project>
