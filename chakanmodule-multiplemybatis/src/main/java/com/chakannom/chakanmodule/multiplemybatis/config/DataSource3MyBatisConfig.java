@@ -16,9 +16,9 @@ import com.chakannom.chakanmodule.multiplemybatis.annotation.DataSource3;
 public class DataSource3MyBatisConfig extends MyBatisConfig {
 
 	@Bean(name = "dataSource3SqlSessionFactory")
-	public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource3") DataSource dataSource3) throws Exception {
+	public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource3") DataSource dataSource) throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
-		configureSqlSessionFactory(sqlSessionFactoryBean, dataSource3);
+		configureSqlSessionFactory(sqlSessionFactoryBean, dataSource);
 		return sqlSessionFactoryBean.getObject();
 	}
 }
