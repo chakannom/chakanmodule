@@ -16,6 +16,7 @@ class DataSource2DatabaseConfig extends DatabaseConfig {
 	@Autowired
 	private DataSource2DatabaseProperties dataSource2DatabaseProperties;
 
+	@Override
 	@Bean(name = "dataSource2", destroyMethod = "close")
 	public DataSource dataSource() {
 		org.apache.tomcat.jdbc.pool.DataSource dataSource2 = new org.apache.tomcat.jdbc.pool.DataSource();

@@ -16,6 +16,7 @@ class DataSource3DatabaseConfig extends DatabaseConfig {
 	@Autowired
 	private DataSource3DatabaseProperties dataSource3DatabaseProperties;
 
+	@Override
 	@Bean(name = "dataSource3", destroyMethod = "close")
 	public DataSource dataSource() {
 		org.apache.tomcat.jdbc.pool.DataSource dataSource3 = new org.apache.tomcat.jdbc.pool.DataSource();

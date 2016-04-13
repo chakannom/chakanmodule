@@ -15,6 +15,7 @@ import com.chakannom.chakanmodule.multiplemybatis.annotation.DataSource3;
 @MapperScan(basePackages = MyBatisConfig.BASE_PACKAGE, annotationClass = DataSource3.class, sqlSessionFactoryRef = "dataSource3SqlSessionFactory")
 public class DataSource3MyBatisConfig extends MyBatisConfig {
 
+	@Override
 	@Bean(name = "dataSource3SqlSessionFactory")
 	public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource3") DataSource dataSource) throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
