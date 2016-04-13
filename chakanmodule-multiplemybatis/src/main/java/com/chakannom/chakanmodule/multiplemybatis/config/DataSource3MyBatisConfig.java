@@ -15,10 +15,10 @@ import com.chakannom.chakanmodule.multiplemybatis.annotation.DataSource3;
 @MapperScan(basePackages = MyBatisConfig.BASE_PACKAGE, annotationClass = DataSource3.class, sqlSessionFactoryRef = "dataSource3SqlSessionFactory")
 public class DataSource3MyBatisConfig extends MyBatisConfig {
 
-	@Bean
-	public SqlSessionFactory dataSource3SqlSessionFactory(@Qualifier("dataSource3") DataSource dataSource3) throws Exception {
-		SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
-		configureSqlSessionFactory(sessionFactoryBean, dataSource3);
-		return sessionFactoryBean.getObject();
+	@Bean(name = "dataSource3SqlSessionFactory")
+	public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource3") DataSource dataSource3) throws Exception {
+		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+		configureSqlSessionFactory(sqlSessionFactoryBean, dataSource3);
+		return sqlSessionFactoryBean.getObject();
 	}
 }
