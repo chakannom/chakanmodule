@@ -1,0 +1,15 @@
+description = 'ChaKanModule Multiple Mybatis'
+
+jar {
+	baseName = 'chakanmodule-multiplemybatis'
+	version = '1.0.0.RELEASE'
+}
+
+dependencies {
+	// ChaKanModule Multiple DataSource
+	compile('com.chakannom.chakanmodule:chakanmodule-multipledatasource:1.0.0.RELEASE')
+	// Spring Mybatis
+	compile('org.mybatis:mybatis-spring:1.2.3')
+	// Mybatis
+	compile('org.mybatis:mybatis:3.3.0')
+}

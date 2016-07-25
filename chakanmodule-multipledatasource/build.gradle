@@ -1,0 +1,15 @@
+description = 'ChaKanModule Multiple DataSource'
+
+jar {
+	baseName = 'chakanmodule-multipledatasource'
+	version = '1.0.0.RELEASE'
+}
+
+dependencies {
+	// Spring Boot Configuration Processor
+	compile('org.springframework.boot:spring-boot-configuration-processor')
+	// Spring Boot Jdbc
+	compile('org.springframework.boot:spring-boot-starter-jdbc')
+	// Mysql
+	compile('mysql:mysql-connector-java')
+}

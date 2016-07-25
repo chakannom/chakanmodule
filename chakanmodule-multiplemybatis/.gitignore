@@ -1,2 +1,9 @@
-/target/
+/.factorypath
+/.project
+/.springBeans
 /.apt_generated/
+/.gradle/
+/.settings/
+/bin/
+/build/
+/target/

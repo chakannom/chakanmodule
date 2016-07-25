@@ -1,0 +1,4 @@
+rootProject.name = 'chakanmodule'
+
+include 'chakanmodule-multipledatasource'
+include 'chakanmodule-multiplemybatis'

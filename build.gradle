@@ -1,0 +1,57 @@
+buildscript {
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+	dependencies {
+		classpath('org.springframework.boot:spring-boot-gradle-plugin:1.3.6.RELEASE')
+		classpath('io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE')
+	}
+}
+
+allprojects {
+}
+
+subprojects {
+	apply plugin: 'java'
+	apply plugin: 'spring-boot'
+	apply plugin: 'io.spring.dependency-management'
+	apply plugin: 'eclipse-wtp'
+	
+	group = 'com.chakannom.chakanmodule'
+	version = '1.0.0.RELEASE'
+	
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+
+	repositories {
+		mavenLocal()
+		mavenCentral()
+	}
+	
+	dependencyManagement {
+		dependencies {
+			dependency('org.springframework.boot:spring-boot-dependencies:1.3.6.RELEASE')
+		}
+	}
+	
+	dependencies {
+	}
+	
+	eclipseJdt << {
+		File f = file('.settings/org.eclipse.core.resources.prefs')
+		f.write('eclipse.preferences.version=1\n')
+		f.append('encoding/<project>=UTF-8')
+		f = file('.settings/org.eclipse.core.runtime.prefs')
+		f.write('eclipse.preferences.version=1\n')
+		f.append('line.separator=\\r\\n\n')
+	}
+	
+	eclipse {
+		classpath {
+			defaultOutputDir = file('build/bin')
+			containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+			containers('org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8')
+		}
+	}
+}
