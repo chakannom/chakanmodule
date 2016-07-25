@@ -17,6 +17,7 @@ subprojects {
 	apply plugin: 'spring-boot'
 	apply plugin: 'io.spring.dependency-management'
 	apply plugin: 'eclipse-wtp'
+	apply plugin: 'maven-publish'
 	
 	group = 'com.chakannom.chakanmodule'
 	version = '1.0.0.RELEASE'
@@ -36,6 +37,14 @@ subprojects {
 	}
 	
 	dependencies {
+	}
+	
+	publishing {
+	    publications {
+	        mavenJava(MavenPublication) {
+	            from components.java
+	        }
+	    }
 	}
 	
 	eclipseJdt << {
