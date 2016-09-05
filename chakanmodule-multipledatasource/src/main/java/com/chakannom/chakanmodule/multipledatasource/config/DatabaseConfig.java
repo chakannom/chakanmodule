@@ -2,13 +2,10 @@ package com.chakannom.chakanmodule.multipledatasource.config;
 
 import javax.sql.DataSource;
 
-import org.springframework.context.annotation.Bean;
-
 import com.chakannom.chakanmodule.multipledatasource.properties.DatabaseProperties;
 
 public abstract class DatabaseConfig {
 
-	@Bean
 	public abstract DataSource dataSource();
 
 	protected void configureDataSource(org.apache.tomcat.jdbc.pool.DataSource dataSource, DatabaseProperties databaseProperties) {

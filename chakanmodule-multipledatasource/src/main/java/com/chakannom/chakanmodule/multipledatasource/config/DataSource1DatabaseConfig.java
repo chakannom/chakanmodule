@@ -17,7 +17,7 @@ class DataSource1DatabaseConfig extends DatabaseConfig {
 	private DataSource1DatabaseProperties dataSource1DatabaseProperties;
 
 	@Override
-	@Bean(name = "dataSource1", destroyMethod = "close")
+	@Bean(name="dataSource1", destroyMethod="close")
 	public DataSource dataSource() {
 		org.apache.tomcat.jdbc.pool.DataSource dataSource1 = new org.apache.tomcat.jdbc.pool.DataSource();
 		configureDataSource(dataSource1, dataSource1DatabaseProperties);

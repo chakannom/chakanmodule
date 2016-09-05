@@ -33,7 +33,7 @@ public class DataSource0DatabaseProperties implements DatabaseProperties {
 	private int minIdle;
 
 	@Value("${chakan.module.datasource[0].max-wait:3000}")
-	private int maxWait;
+	private int maxWait; 
 
 	@Value("${chakan.module.datasource[0].validation-query:SELECT 1}")
 	private String validationQuery;
