@@ -12,11 +12,11 @@ import org.springframework.context.annotation.Configuration;
 import com.chakannom.chakanmodule.multiplemybatis.annotation.DataSource3;
 
 @Configuration
-@MapperScan(basePackages = MyBatisConfig.BASE_PACKAGE, annotationClass = DataSource3.class, sqlSessionFactoryRef = "dataSource3SqlSessionFactory")
+@MapperScan(basePackages=MyBatisConfig.BASE_PACKAGE, annotationClass=DataSource3.class, sqlSessionFactoryRef="dataSource3SqlSessionFactory")
 public class DataSource3MyBatisConfig extends MyBatisConfig {
 
 	@Override
-	@Bean(name = "dataSource3SqlSessionFactory")
+	@Bean(name="dataSource3SqlSessionFactory")
 	public SqlSessionFactory sqlSessionFactory(@Qualifier("dataSource3") DataSource dataSource) throws Exception {
 		SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
 		configureSqlSessionFactory(sqlSessionFactoryBean, dataSource);
