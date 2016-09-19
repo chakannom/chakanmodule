@@ -19,7 +19,7 @@ subprojects {
 	apply plugin: 'eclipse-wtp'
 	apply plugin: 'maven-publish'
 	
-	group = 'com.chakannom.chakanmodule'
+	group = 'com.chakans.chakanmodule'
 	version = '1.0.0.RELEASE'
 	
 	sourceCompatibility = 1.8
