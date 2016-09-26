@@ -38,14 +38,12 @@ public class DataSource0DatabaseProperties implements DatabaseProperties {
 	@Value("${chakan.module.datasource[0].validation-query:SELECT 1}")
 	private String validationQuery;
 
+	@Value("${chakan.module.datasource[0].validation-interval:34000}")
+	private int validationInterval;
+
 	@Override
 	public String getDriverClassName() {
 		return driverClassName;
-	}
-
-	@Override
-	public void setDriverClassName(String driverClassName) {
-		this.driverClassName = driverClassName;
 	}
 
 	@Override
@@ -54,18 +52,8 @@ public class DataSource0DatabaseProperties implements DatabaseProperties {
 	}
 
 	@Override
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	@Override
 	public String getUserName() {
 		return userName;
-	}
-
-	@Override
-	public void setUserName(String userName) {
-		this.userName = userName;
 	}
 
 	@Override
@@ -74,18 +62,8 @@ public class DataSource0DatabaseProperties implements DatabaseProperties {
 	}
 
 	@Override
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	@Override
 	public int getInitialSize() {
 		return initialSize;
-	}
-
-	@Override
-	public void setInitialSize(int initialSize) {
-		this.initialSize = initialSize;
 	}
 
 	@Override
@@ -94,18 +72,8 @@ public class DataSource0DatabaseProperties implements DatabaseProperties {
 	}
 
 	@Override
-	public void setMaxActive(int maxActive) {
-		this.maxActive = maxActive;
-	}
-
-	@Override
 	public int getMaxIdle() {
 		return maxIdle;
-	}
-
-	@Override
-	public void setMaxIdle(int maxIdle) {
-		this.maxIdle = maxIdle;
 	}
 
 	@Override
@@ -114,18 +82,8 @@ public class DataSource0DatabaseProperties implements DatabaseProperties {
 	}
 
 	@Override
-	public void setMinIdle(int minIdle) {
-		this.minIdle = minIdle;
-	}
-
-	@Override
 	public int getMaxWait() {
 		return maxWait;
-	}
-
-	@Override
-	public void setMaxWait(int maxWait) {
-		this.maxWait = maxWait;
 	}
 
 	@Override
@@ -134,8 +92,8 @@ public class DataSource0DatabaseProperties implements DatabaseProperties {
 	}
 
 	@Override
-	public void setValidationQuery(String validationQuery) {
-		this.validationQuery = validationQuery;
+	public int getValidationInterval() {
+		return validationInterval;
 	}
 
 	@Override
