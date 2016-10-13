@@ -18,6 +18,7 @@ public abstract class DatabaseConfig {
 		dataSource.setMinIdle(databaseProperties.getMinIdle());
 		dataSource.setMaxWait(databaseProperties.getMaxWait());
 		dataSource.setValidationQuery(databaseProperties.getValidationQuery());
+		dataSource.setValidationInterval(databaseProperties.getValidationInterval());
 		dataSource.setTestOnBorrow(false);
 		dataSource.setTestOnReturn(false);
 	}
